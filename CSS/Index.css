@@ -1,0 +1,24 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-Menu:rgb(53, 105, 148);
+}
+
+body{
+    height: 100vh;
+}
+
+header{
+    background-color:var(--cor-Menu) ;
+    width: 100vw;
+    height: 10vh;
+}   
+
+.menu{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
