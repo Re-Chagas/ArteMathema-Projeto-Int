@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Menu Dropdown*/
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 0 3px rgb(0, 0, 0);
+  }
+
+  nav ul {
+    margin-inline-start: 300px;    
+  }
+
+  nav ul li {
+    display: inline;
+    border-radius: 5px;
+    transition: all 1s;
+  }
+  
+  nav li a {
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  nav li:hover {
+    display: inline-block;
+    transition: all 1s;
+    box-shadow: 0 0 4px white;
+  }
+  
+  nav li a:hover {
+    padding: 10px;
+    transition: all 0.7s; 
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.678);
+    color: white;
+  }
+ 
+  .dropdown-menu {
+    position: absolute;
+    box-shadow: 0 0 2px #ffffff;
+    display: none;
+    z-index: 1000;
+  }
+  
+  .dropdown-menu a {
+    transition: all 0.5s;
+    display: block;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff; 
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  /*titulo*/
+
+  .titulo{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 25px;
+  }
+
+  .titulo a{
+    color: black;
+    text-decoration: none;
+  }
+
+  .titulo .mathema{
+    margin-left: 100px;
+  }
+
+  /*tela de carregamento*/
+
+  #tela-carregamento {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  #tela-carregamento h1 {
+    font-size: 50px;
+    font-weight: bold;
+  }
+  
+  #tela-carregamento p {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+  #tela-carregamento p .span1{
+    transition-delay: 250ms;
+    transition-property: scale 10px;
+  }
+
+  .EscalaBola {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.EscalaBola .Bola {
+    width: 7.5px;
+    height: 7.5px;
+    border-radius: 100%;
+    background-color: #000;
+    margin: 5px;
+    transform: scale(0);
+    transition: transform 2s ease-in-out;
+}
+
+.EscalaBola .Bola:nth-child(1) {
+    animation: scaleAnimation 2s 0s infinite;
+}
+
+.EscalaBola .Bola:nth-child(2) {
+    animation: scaleAnimation 2s 0.5s infinite;
+}
+
+.EscalaBola .Bola:nth-child(3) {
+    animation: scaleAnimation 2s 1s infinite;
+}
+
+@keyframes scaleAnimation {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+  
+  .sinal {
+    display: inline-block;
+    font-size: 48px;
+    animation: girar 2s linear infinite;
+  }
+  
+  @keyframes girar {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
