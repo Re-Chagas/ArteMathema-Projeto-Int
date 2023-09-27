@@ -213,11 +213,11 @@ nav{
   .box {
     text-align: center;
     font-style: bold;
-    margin-top: 20px;
+
   }
-  #titulosecundario{
+  .titulosecundario{
     text-align: left;
-    margin-top: 40px;
+    margin-top: 20px;
   
   }
   .box h4{
