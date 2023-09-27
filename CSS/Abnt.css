@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+body{
+  overflow-x: hidden;
+}
+
+
+
 /*Menu Dropdown*/
 
 nav{
@@ -168,3 +174,56 @@ nav{
       transform: rotate(360deg);
     }
   } 
+
+  footer {
+    position: relative;
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    width: 100vw;
+    color: #fff;
+  }
+
+  footer p{
+    text-decoration: none;
+  }
+  .topicos{
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(241, 241, 241);
+    margin-top: 3px;
+  }
+  .box{
+    margin: 50px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 3cm 2cm 2cm 3cm;
+    width: 60%;
+    z-index: 1;
+     ;
+  }
+  .box p{
+    text-indent: 2cm;
+    text-align: justify;
+    margin-top: 20px;
+  }
+  .box {
+    text-align: center;
+    font-style: bold;
+    margin-top: 20px;
+  }
+  #titulosecundario{
+    text-align: left;
+    margin-top: 40px;
+  
+  }
+  .box h4{
+    margin-top: 20px;
+  }
+  
+  .imagem{
+    text-align: center;
+  }

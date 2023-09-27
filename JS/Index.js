@@ -8,3 +8,4 @@ setTimeout(() => {
       telaCarregamento.style.display = 'none';
     }, 500);
   }, 1000);
+
