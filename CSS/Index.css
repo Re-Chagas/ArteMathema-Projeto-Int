@@ -23,7 +23,7 @@ nav{
     display: grid;
     position: fixed;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     display: none;
     top: 0;
     left: 0;
@@ -216,7 +216,8 @@ nav{
     display: flex;
     flex-wrap:wrap;
     justify-content: space-evenly;  
-    align-items: center
+    align-items: center;
+    text-align: center;
   }
   
   .imagensF img{
@@ -225,7 +226,20 @@ nav{
     border-radius: 500px;
     border: 2px solid rgba(0, 0, 0, 0.199);
   }
-  
-  .imagensF{
-    text-align: center;
+
+  @media (max-width: 1200px){
+    #imagensFamosos .imagensF {
+      margin-bottom: 200px;
+    }
   }
+
+  @media(max-width:920px) {
+
+    .bunner{
+      margin-top: 100px;
+    }
+
+  }
+
+  /* resposive */
+
