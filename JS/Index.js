@@ -6,8 +6,8 @@ setTimeout(() => {
     telaCarregamento.style.opacity = 0;
     setTimeout(() => {
       telaCarregamento.style.display = 'none';
-    }, 0);
-  }, 0);
+    }, 500);
+  }, 1000);
 
 //menu overlay
 
