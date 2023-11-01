@@ -13,62 +13,84 @@ body{
 /*Menu Dropdown*/
 
 nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    box-shadow: 0 0 3px rgb(0, 0, 0);
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 0 3px rgb(0, 0, 0);
+}
 
-  nav ul {
-    margin-inline-start: 300px;    
-  }
+#open-menu{
+  background-color: transparent;
+  border: none;
+}
 
-  nav ul li {
-    display: inline;
-    border-radius: 5px;
-    transition: all 1s;
-  }
-  
-  nav li a {
-    display: inline-block;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-    text-decoration: none;
-    padding: 10px;
-  }
-  
-  nav li:hover {
-    display: inline-block;
-    transition: all 1s;
-    box-shadow: 0 0 4px white;
-  }
-  
-  nav li a:hover {
-    padding: 10px;
-    transition: all 0.7s; 
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.678);
-    color: white;
-  }
- 
-  .dropdown-menu {
-    position: absolute;
-    box-shadow: 0 0 2px #ffffff;
-    display: none;
-    z-index: 1000;
-  }
-  
-  .dropdown-menu a {
-    transition: all 0.5s;
-    display: block;
-    color: rgb(0, 0, 0);
-    background-color: #ffffff; 
-  }
-  
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
+#overlay {
+  display: grid;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(5px);
+}
+
+.menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.644);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  padding: 10px;
+}
+
+.Ccontent {
+  background-color: rgba(255, 255, 255, 0.644);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  border-bottom: 1px solid #000000;
+}
+
+.C-Titulo, .menu a{
+  color: #000;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.overlay-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+  padding: 10px;
+}
+
+.overlay-content a{
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.overlay-content li{
+  padding: 5px;
+  list-style: none;
+}
 
   /*titulo*/
 
@@ -192,28 +214,53 @@ nav{
     display: flex ;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
     background-color: rgb(241, 241, 241);
     margin-top: 3px;
   }
+  
+  
   .box{
     margin: 50px;
     background-color: white;
     border: 1px solid black;
     padding: 3cm 2cm 2cm 3cm;
     width: 60%;
-    z-index: 1;
-     ;
   }
+  @media(max-width:1620px){
+    .box{
+      width: 80vw;
+    }
+  }
+  @media(max-width:800px){
+    .box{
+      width: 90vw;
+    }
+  }
+ 
   .box p{
     text-indent: 2cm;
     text-align: justify;
     margin-top: 20px;
   }
-  .box {
-    text-align: center;
-    font-style: bold;
-
+  @media(max-width:650px){
+    .box{
+      width: 100vw;
+      margin: 20px;
+      padding: 2cm 1cm 1cm 2cm;
+    }
+    .box p{
+      margin: 0;
+      text-indent: 1cm;
+    }
+  }
+  @media(max-width:500px){
+    .box{
+      width: 100vw;
+      margin: 0;
+      padding: 1cm 1cm 1cm 1cm;
+      border: none;
+    }
   }
   .titulosecundario{
     text-align: left;
